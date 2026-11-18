@@ -45,6 +45,7 @@
             font-size: 27px;
             font-weight: 800;
             color: var(--marrom);
+            margin-bottom: 0%;
         }
 
 
@@ -57,6 +58,7 @@
             display: flex;
             gap: 32px;
             align-items: center;
+            margin-top: 0%;
         }
 
 
@@ -90,7 +92,6 @@
             background: var(--marrom);
             color: white;
         }
-
 
         .btn-marrom:hover {
             background: var(--amarelo);
@@ -185,20 +186,25 @@
             flex-wrap: wrap;
             gap: 25px;
             background: var(--amarelo);
+            
         }
 
 
         .benefit {
             font-weight: 800;
-            font-size: 15px;
+            font-size: 14.5px;
             display: flex;
             align-items: center;
             gap: 10px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-style: var(--marrom);
         }
 
 
         .benefit span {
-            font-size: 23px;
+            font-size: 22px;
+            font-style: var(--marrom);
         }
 
 
@@ -303,7 +309,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-top: 20px;
+
         }
 
 
@@ -429,6 +435,32 @@
             text-align: center;
         }
 
+        .whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 60px;
+    height: 60px;
+    background-color: #000000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.whatsapp-float img {
+    width: 34px;
+    height: 34px;
+}
+
 
         footer .logo {
             color: var(--creme);
@@ -473,19 +505,31 @@
         @media (max-width: 600px) {
             header {
                 flex-direction: column;
-                gap: 18px;
+                gap: 10px;
+                height: 130px;
+                padding-top: 10px;
+                position: sticky;
             }
 
 
             nav {
-                gap: 15px;
                 flex-wrap: wrap;
                 justify-content: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: nowrap;      
+                gap: 5px;               
+                width: 100%;
             }
 
 
             nav a {
-                font-size: 12px;
+                font-size: 11px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                white-space: nowrap; 
+
             }
 
 
@@ -512,7 +556,34 @@
 
             .benefits {
                 justify-content: flex-start;
+                display: block;
             }
 
-           
+            .btn {
+                display: inline-block;
+                border-radius: 6px;
+                padding: 10px 10px;
+                text-decoration: none;
+                font-weight: 700;
+                transition: .3s;
+                cursor: pointer;
+                border: none;
+        }
+
+            .btn-marrom {
+            display: none;
+            }
+
+            .btn-marrom-nav {
+            background: var(--marrom);
+            color: white;
+            border-radius: 8px;
+            
+        }
+
+        .btn-marrom-nav:hover {
+            background: var(--amarelo);
+            transform: translateY(-3px);
+        }
+
         }
